@@ -4,4 +4,5 @@
     <dimen name="large_margin">24dp</dimen>
     <dimen name="huge_margin">48dp</dimen>
     <dimen name="standard_padding">16dp</dimen>
+    <dimen name="otp_confirmation_field_width">48dp</dimen>
 </resources>

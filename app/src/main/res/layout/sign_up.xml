@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="300dp"
         android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_marginEnd="@dimen/standard_margin"
         app:layout_constraintEnd_toStartOf="@+id/appCompatImageView"
         app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,13 +44,13 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="116dp"
-        android:text="@string/welcome_login_no_user"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:text="@string/hello_sign_up"
         android:textColor="@color/black"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
 
@@ -59,8 +59,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textStyle="bold|italic"
         android:text="@string/enter_your_information_below_text_sign_up"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView"
@@ -71,14 +71,16 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:layout_marginRight="@dimen/standard_margin"
+        app:helperText="@string/required_text"
+        app:helperTextTextColor="@color/blue_700"
         app:layout_constraintTop_toBottomOf="@id/aditional_text">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email_address_btn_hint_text_sign_up" />
+            android:hint="Nombre completo" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -87,33 +89,102 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:layout_marginRight="@dimen/standard_margin"
         android:hint=""
-        android:padding="16dp"
+        app:errorEnabled="true"
+        app:helperText="@string/required_text"
+        app:helperTextTextColor="@color/blue_700"
         app:layout_constraintTop_toBottomOf="@id/tf_email_address_login">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password_btn_hint_text_sign_up" />
+            android:hint="Correo Electrónico" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_empresa"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:hint=""
+        app:errorEnabled="true"
+        android:enabled="false"
+        app:helperTextTextColor="@color/blue_700"
+        app:layout_constraintTop_toBottomOf="@id/tf_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Empresa" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_ciudad"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:hint=""
+        app:errorEnabled="true"
+        app:helperText="@string/required_text"
+        app:helperTextTextColor="@color/blue_700"
+        app:layout_constraintTop_toBottomOf="@id/tf_empresa">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ciudad" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_address"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:layout_marginRight="@dimen/standard_margin"
+        android:hint=""
+        app:errorEnabled="true"
+        app:helperText="@string/required_text"
+        app:helperTextTextColor="@color/blue_700"
+        app:layout_constraintTop_toBottomOf="@id/tf_ciudad">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/facebook_icon_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginBottom="@dimen/standard_margin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tf_password"
+        app:layout_constraintBottom_toTopOf="@id/forgot_password_login"
         app:srcCompat="@drawable/ic_facebook_black_48dp" />
 
     <androidx.appcompat.widget.AppCompatImageView
 
         android:layout_width="@dimen/huge_margin"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginBottom="@dimen/standard_margin"
         app:layout_constraintStart_toEndOf="@id/facebook_icon_login"
-        app:layout_constraintTop_toBottomOf="@id/tf_password"
+        app:layout_constraintBottom_toTopOf="@id/forgot_password_login"
         app:srcCompat="@drawable/ic_google_plus" />
 
 
@@ -136,9 +207,9 @@
         android:layout_marginEnd="@dimen/standard_margin"
         android:layout_marginBottom="@dimen/standard_margin"
         android:backgroundTint="@color/blue_700"
-        android:text="@string/btn_login_text_btn_sign_up"
-        android:textColor="@color/white"
         android:drawableEnd="@drawable/ic_right_arrow"
+        android:text="@string/btn_siguiente_text_btn_sign_up"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/forgot_password_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/forgot_password_login"

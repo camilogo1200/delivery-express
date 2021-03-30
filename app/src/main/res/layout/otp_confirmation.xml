@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/otp_main_header"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:text="Ingrese el código enviado a su correo electrónico"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/otp_help_text"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:text="@string/topt_sent_email_helper_text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otp_main_header" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_topt_first_digit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/otp_confirmation_field_width"
+        android:layout_height="@dimen/otp_confirmation_field_width"
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/otp_confirmation_field_width"
+        android:layout_marginRight="@dimen/standard_margin"
+        app:errorEnabled="true"
+        app:helperText="@string/required_text"
+        app:helperTextTextColor="@color/blue_700"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otp_help_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="@dimen/otp_confirmation_field_width"
+            android:layout_height="@dimen/otp_confirmation_field_width"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_topt_second_digit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/otp_confirmation_field_width"
+        android:layout_height="@dimen/otp_confirmation_field_width"
+        android:layout_marginLeft="@dimen/standard_margin"
+        app:errorEnabled="true"
+        app:helperText="@string/required_text"
+        app:helperTextTextColor="@color/blue_700"
+        app:layout_constraintBottom_toBottomOf="@id/tf_topt_first_digit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/tf_topt_first_digit"
+        app:layout_constraintTop_toTopOf="@id/tf_topt_first_digit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="@dimen/otp_confirmation_field_width"
+            android:layout_height="@dimen/otp_confirmation_field_width"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_topt_third_digit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/otp_confirmation_field_width"
+        android:layout_height="@dimen/otp_confirmation_field_width"
+        android:layout_marginLeft="@dimen/standard_margin"
+        app:errorEnabled="true"
+        app:helperText="@string/required_text"
+        app:helperTextTextColor="@color/blue_700"
+        app:layout_constraintBottom_toBottomOf="@id/tf_topt_first_digit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/tf_topt_second_digit"
+        app:layout_constraintTop_toTopOf="@id/tf_topt_first_digit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="@dimen/otp_confirmation_field_width"
+            android:layout_height="@dimen/otp_confirmation_field_width"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_topt_fourth_digit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/otp_confirmation_field_width"
+        android:layout_height="@dimen/otp_confirmation_field_width"
+        android:layout_marginLeft="@dimen/standard_margin"
+        app:errorEnabled="true"
+        app:helperText="@string/required_text"
+        app:helperTextTextColor="@color/blue_700"
+        app:layout_constraintBottom_toBottomOf="@id/tf_topt_first_digit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/tf_topt_third_digit"
+        app:layout_constraintTop_toTopOf="@id/tf_topt_first_digit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="@dimen/otp_confirmation_field_width"
+            android:layout_height="@dimen/otp_confirmation_field_width"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_topt_fifth_digit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/otp_confirmation_field_width"
+        android:layout_height="@dimen/otp_confirmation_field_width"
+        android:layout_marginLeft="@dimen/standard_margin"
+        app:errorEnabled="true"
+        app:helperText="@string/required_text"
+        app:helperTextTextColor="@color/blue_700"
+        app:layout_constraintBottom_toBottomOf="@id/tf_topt_first_digit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/tf_topt_fourth_digit"
+        app:layout_constraintTop_toTopOf="@id/tf_topt_first_digit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="@dimen/otp_confirmation_field_width"
+            android:layout_height="@dimen/otp_confirmation_field_width"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_topt_sixth_digit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/otp_confirmation_field_width"
+        android:layout_height="@dimen/otp_confirmation_field_width"
+        android:layout_marginLeft="@dimen/standard_margin"
+        app:errorEnabled="true"
+        app:helperText="@string/required_text"
+        app:helperTextTextColor="@color/blue_700"
+        app:layout_constraintBottom_toBottomOf="@id/tf_topt_first_digit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/tf_topt_fifth_digit"
+        app:layout_constraintTop_toTopOf="@id/tf_topt_first_digit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="@dimen/otp_confirmation_field_width"
+            android:layout_height="@dimen/otp_confirmation_field_width"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/resend_otp_message_text_field"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:text="Reenvio de código en : "
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="timetrack_otp_message_text_field"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tf_topt_first_digit" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timetrack_otp_message_text_field"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="00:00"
+        android:textColor="@color/blue_700"
+        app:layout_constraintBottom_toBottomOf="@id/resend_otp_message_text_field"
+        app:layout_constraintStart_toEndOf="@+id/resend_otp_message_text_field"
+        app:layout_constraintTop_toTopOf="@id/resend_otp_message_text_field"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/Login_button"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/standard_margin"
+        android:backgroundTint="@color/blue_700"
+        android:text="@string/continue_text"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
