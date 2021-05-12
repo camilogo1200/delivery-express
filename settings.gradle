@@ -1,2 +1,5 @@
-include ':app'
+include ':dvex-data'
+include ':dvex-domain'
+include ':dvex-utils'
+include ':dvex-ui'
 rootProject.name = "Dvex"
